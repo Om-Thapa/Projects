@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" class="display" value="" readonly>
+        <button onclick="clearExp()" class="operators">C</button>
+        <button onclick="updateExp('%')" class="operators">%</button>
+        <button onclick="deleteExp()" class="operators" style="font-size: 1rem;">Delete</button>
+        <button onclick="updateExp('/')" class="operators">/</button>
+        <button onclick="updateExp('7')">7</button>
+        <button onclick="updateExp('8')">8</button>
+        <button onclick="updateExp('9')">9</button>
+        <button onclick="updateExp('*')" class="operators">*</button>
+        <button onclick="updateExp('4')">4</button>
+        <button onclick="updateExp('5')">5</button>
+        <button onclick="updateExp('6')">6</button>
+        <button onclick="updateExp('-')" class="operators">-</button>
+        <button onclick="updateExp('1')">1</button>
+        <button onclick="updateExp('2')">2</button>
+        <button onclick="updateExp('3')">3</button>
+        <button onclick="updateExp('+')" class="operators">+</button>
+        <button onclick="updateExp('.')">.</button>
+        <button onclick="updateExp('0')">0</button>
+        <button onclick="calcExp()" class="operators" id="colspan">=</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

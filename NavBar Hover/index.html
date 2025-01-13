@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        body{
+            background-color: #202020e2;
+        }
+        ul{
+            background-color: rgb(80, 140, 140);
+            display: flex;
+            list-style-type: none;
+            justify-content: space-around;
+            align-items: center;
+        }
+        a{
+            position: relative;
+        }
+        li{
+            margin: 5px;
+        }
+        .dropdown a{
+            display: block;
+        }
+        .dropdown-content{
+            display:none;
+            background-color: #202010;
+            min-width: 100px;
+            box-shadow: 5px 5px 10px rgb(27, 27, 27);
+        }
+        .dropdown:hover .dropdown-content{
+            display:inline;
+            position: absolute;
+        }
+        .dropdown:hover .dropdown-content a{           
+            color: white;
+            padding: 2px 3px;
+        }
+        a::after{
+            content: "";
+            position:absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 100%;
+            background-color: coral;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        a:hover::after{
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li class="dropdown">
+                <a href="">About
+                <div class="dropdown-content">
+                    <a href="">Our Story</a>
+                    <a href="">Team</a>
+                    <a href="">Contacts</a>
+                </div>
+                </a>
+            </li>
+            <li><a href="">Product</a></li>
+            <li><button>Login</button></li>
+        </ul>
+    </div>
+</body>
+</html>
